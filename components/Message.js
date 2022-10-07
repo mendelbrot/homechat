@@ -17,7 +17,10 @@ const Message = ({ message }) => {
         )}
       </div>
       <div>
-        <p className="text-blue-700 font-bold">{message.author.username}</p>
+        <div>
+          <p className="text-blue-700 font-bold">{message.author.username}</p>
+          <p className="text-blue-700 font-bold">{message.inserted_at.split('.')[0].replace('T', ' ')}</p>
+        </div>
         <p className="text-white">{message.message}</p>
       </div>
     </div>
